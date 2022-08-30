@@ -1,3 +1,4 @@
+
 # Spring Boot & JavaFX Sample 
 
 This sample project is designed to demonstrate how to use Spring Boot with JavaFX.
