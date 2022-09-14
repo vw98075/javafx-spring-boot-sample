@@ -20,4 +20,8 @@ public class InputTextService {
     public long getTotal(){
         return repository.count();
     }
+
+    public Iterable<InputText> getAll(){
+        return repository.findAllByOrderByIdDesc();
+    }
 }

@@ -3,6 +3,7 @@ package com.example.springjavafxh2.entity;
 import lombok.Data;
 import lombok.ToString;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,13 +21,13 @@ public class InputText {
 
     private String inputText;
 
-    private LocalDateTime dateTime;
+    private Instant dateTime;
 
     public InputText() {
     }
 
-    public InputText(String inputText, LocalDateTime dateTime) {
+    public InputText(String inputText) {
         this.inputText = inputText;
-        this.dateTime = dateTime;
+        this.dateTime = Instant.now();
     }
 }
