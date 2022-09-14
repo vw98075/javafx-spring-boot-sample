@@ -4,7 +4,6 @@ import lombok.Data;
 import lombok.ToString;
 
 import java.time.Instant;
-import java.time.LocalDateTime;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -21,13 +20,13 @@ public class InputText {
 
     private String inputText;
 
-    private Instant dateTime;
+    private Instant timestamp;
 
     public InputText() {
     }
 
     public InputText(String inputText) {
         this.inputText = inputText;
-        this.dateTime = Instant.now();
+        this.timestamp = Instant.now();
     }
 }

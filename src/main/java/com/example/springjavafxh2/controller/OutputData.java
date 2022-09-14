@@ -17,7 +17,7 @@ public class OutputData {
 
     public OutputData(InputText inputText){
         this.setInputText(inputText.getInputText());
-        this.setTimestamp(inputText.getDateTime().toString());
+        this.setTimestamp(inputText.getTimestamp().toString());
         this.setId(String.valueOf(inputText.getId()));
     }
     public OutputData(int id, String inputText, String timestamp) {

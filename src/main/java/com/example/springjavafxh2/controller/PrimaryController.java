@@ -50,12 +50,14 @@ public class PrimaryController implements Initializable {
     
     @FXML protected void handleSubmitButtonAction(ActionEvent event) {
         log.debug("handleSubmitButtonAction");
-        service.save(new InputText(inputText.getText()));
+        InputText ix =service.save(new InputText(inputText.getText()));
 
-        List<OutputData> outputDataList = new ArrayList<>();
-        service.getAll().forEach(e -> outputDataList.add(new OutputData(e)));
-        ObservableList<OutputData> list = FXCollections.observableArrayList(outputDataList);
-        outputView.setItems(list);
+//        List<OutputData> outputDataList = new ArrayList<>();
+//        service.getAll().forEach(e -> outputDataList.add(new OutputData(e)));
+//        ObservableList<OutputData> list = FXCollections.observableArrayList(outputDataList);
+//        outputView.setItems(list);
+
+        outputView.getItems().add(0, ix);
 
         inputText.setText("");
     }
